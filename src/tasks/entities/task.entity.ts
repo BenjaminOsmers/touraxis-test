@@ -7,7 +7,6 @@ import {
   ManyToOne,
 } from 'typeorm';
 import { User } from 'src/users/entities/user.entity';
-// import { TTaskStatus } from '../../../src/constants/task.status';
 
 @Entity()
 export class Task {

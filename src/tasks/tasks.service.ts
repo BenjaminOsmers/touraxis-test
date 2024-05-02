@@ -88,5 +88,7 @@ export class TasksService {
     }
 
     await this.tasksRepository.remove(task);
+
+    return;
   }
 }
