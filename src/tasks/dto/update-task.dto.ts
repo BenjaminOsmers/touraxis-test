@@ -1,6 +1,6 @@
 import { IsString, IsOptional } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
-import { TTaskStatus } from 'src/constants/task.status';
+// import { TTaskStatus } from 'src/constants/task.status';
 
 export class UpdateTaskDto {
   @ApiProperty({
@@ -19,11 +19,11 @@ export class UpdateTaskDto {
   @IsOptional()
   description: string;
 
-  @ApiProperty({
-    description: 'The status of the task',
-    example: TTaskStatus.PENDING,
-  })
-  @IsString()
-  @IsOptional()
-  status: TTaskStatus;
+  // @ApiProperty({
+  //   description: 'The status of the task',
+  //   example: TTaskStatus.PENDING,
+  // })
+  // @IsString()
+  // @IsOptional()
+  // status: TTaskStatus;
 }

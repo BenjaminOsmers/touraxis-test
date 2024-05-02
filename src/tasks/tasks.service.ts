@@ -20,6 +20,10 @@ export class TasksService {
   ): Promise<Task> {
     const user = await this.usersService.getUser(userId);
 
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+
     const task = this.tasksRepository.create({
       ...createTaskDto,
       user,
