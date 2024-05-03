@@ -2,8 +2,7 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://assets-global.website-files.com/64f709f1309acba2b5ccaa48/65086cff3f18fbe84ee4a16f_TourAxis_Colour.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
-<p align="center">A simple API to manage users and tasks for those users.</p>
-  <p align="center">
+<p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
 <a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
 <a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
@@ -11,7 +10,14 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A simple API to manage users and tasks for those users.
+
+## Database Setup
+
+```bash
+# Create and populate .env file
+$ docker compose up
+```
 
 ## Installation
 
@@ -21,12 +27,21 @@ $ npm install
 
 ## Running the app
 
+### Development
+
 ```bash
 # development
 $ npm run start
 
 # watch mode
 $ npm run start:dev
+```
+
+### Production
+
+```bash
+# build
+$ npm run build
 
 # production mode
 $ npm run start:prod
@@ -45,16 +60,76 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
+## Endpoints
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Base URL
 
-## Stay in touch
+```
+http://localhost:4001/api
+```
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+### Documentation
+
+```
+http://localhost:4001/api/docs
+```
+
+### Routes
+
+#### Create User
+
+```sh
+curl -i -H "Content-Type: application/json" -X POST -d '{"username":"jsmith","first_name" : "John", "last_name" : "Smith"}' http://localhost:4001/api/users
+```
+
+#### Update user
+
+```sh
+curl -i -H "Content-Type: application/json" -X PUT -d '{"first_name" : "John", "last_name" : "Doe"}' http://localhost:4001/api/users/{id}
+```
+
+#### List all users
+
+```sh
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://hostname/api/users
+```
+
+#### Get User info
+
+```sh
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:4001/api/users/{id}
+```
+
+#### Create Task
+
+```sh
+curl -i -H "Content-Type: application/json" -X POST -d '{"name":"My task","description" : "Description of task", "date_time" : "2016-05-25 14:25:00"}' http://localhost:4001/api/users/{user_id}/tasks
+```
+
+#### Update Task
+
+```sh
+curl -i -H "Content-Type: application/json" -X PUT -d '{"name":"My updated task"}' http://localhost:4001/api/users/{user_id}/tasks/{task_id}
+```
+
+#### Delete Task
+
+```sh
+curl -i -H "Content-Type: application/json" -X DELETE http://localhost:4001/api/users/{user_id}/tasks/{task_id}
+```
+
+#### Get Task Info
+
+```sh
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:4001/api/users/{user_id}/tasks/{task_id}
+```
+
+#### List all tasks for a user
+
+```sh
+curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:4001/api/users/{user_id}/tasks
+```
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is [MIT licensed](LICENSE).
