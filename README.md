@@ -1,11 +1,11 @@
 <p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://assets-global.website-files.com/64f709f1309acba2b5ccaa48/65086cff3f18fbe84ee4a16f_TourAxis_Colour.svg" width="200" alt="Nest Logo" /></a>
+  <a href="http://touraxis.com/" target="blank"><img src="https://assets-global.website-files.com/64f709f1309acba2b5ccaa48/65086cff3f18fbe84ee4a16f_TourAxis_Colour.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
 <p align="center">
 <a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
 <a href="https://dl.circleci.com/status-badge/redirect/circleci/KWfnK6dwhHt5bTD2oTbL3A/N8yufgdxD6rc3ZiCh8zVUg/tree/main" target="_blank"><img src="https://dl.circleci.com/status-badge/img/circleci/KWfnK6dwhHt5bTD2oTbL3A/N8yufgdxD6rc3ZiCh8zVUg/tree/main.svg?style=shield" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
+<a href="https://github.com/BenjaminOsmers/touraxis-test/raw/gh-pages/badges/coverage-jest%20coverage.svg?raw=true" target="_blank"><img src="https://github.com/BenjaminOsmers/touraxis-test/raw/gh-pages/badges/coverage-jest%20coverage.svg?raw=true" alt="Coverage" /></a>
 </p>
 
 ## Description
