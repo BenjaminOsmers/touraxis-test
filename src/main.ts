@@ -11,8 +11,8 @@ async function bootstrap() {
   });
 
   const config = new DocumentBuilder()
-    .setTitle('Task Manager API')
-    .setDescription('The Task Manager API')
+    .setTitle('Touraxis Task Manager API')
+    .setDescription('Touraxis The Task Manager API')
     .setVersion('1.0')
     .addTag('tasks')
     .build();
